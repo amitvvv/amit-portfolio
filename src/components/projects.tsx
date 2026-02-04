@@ -7,7 +7,7 @@ const projects = [
   {
     title: "ShopAi | AI SaaS Sales Agent for Shopify",
     role: "Architect & Lead Developer",
-    date: "2024",
+    date: "2025 - Present",
     description: "Architected a system enabling real-time synchronization between LLMs and Shopify API for autonomous sales and inventory checks. Implemented complex Function Calling workflows to execute active cart operations (Add-to-Cart, Checkout, Search Items) directly via WhatsApp interface.",
     features: [
       "Multi-tenant Prompt Engine (Brand Personas)",
