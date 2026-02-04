@@ -91,14 +91,14 @@ function ChatWidgetContent() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-28 right-6 w-[calc(100vw-3rem)] md:w-[500px] h-[700px] max-h-[85vh] border border-white/20 rounded-2xl shadow-2xl flex flex-col z-50 overflow-hidden backdrop-blur-md bg-background/80"
+            className="fixed bottom-28 right-6 w-[calc(100vw-3rem)] md:w-[400px] h-[600px] max-h-[85vh] border border-white/20 rounded-2xl shadow-2xl flex flex-col z-50 overflow-hidden backdrop-blur-md bg-background/80"
           >
             {/* Header */}
-            <div className="p-5 border-b border-white/10 bg-indigo-600/10 flex justify-between items-center">
+            <div className="p-4 border-b border-white/10 bg-indigo-600/10 flex justify-between items-center">
               <div className="flex items-center gap-3">
-                <div className="relative flex h-4 w-4">
+                <div className="relative flex h-3 w-3">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-4 w-4 bg-green-500"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                 </div>
                 <span className="font-bold text-base">Amit's Hype Agent</span>
               </div>
@@ -106,7 +106,7 @@ function ChatWidgetContent() {
                 onClick={() => setIsOpen(false)}
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
-                <X className="w-6 h-6" />
+                <X className="w-5 h-5" />
               </button>
             </div>
 
@@ -123,10 +123,10 @@ function ChatWidgetContent() {
                   <div
                     dir="auto"
                     className={cn(
-                      "max-w-[85%] rounded-2xl px-7 py-5 text-xl shadow-sm whitespace-pre-wrap break-words",
+                      "max-w-[85%] rounded-2xl px-5 py-3 text-base shadow-sm whitespace-pre-wrap break-words",
                       msg.role === "user"
                         ? "bg-indigo-600 text-white rounded-br-none"
-                        : "bg-muted/80 backdrop-blur-sm text-foreground rounded-bl-none border border-white/10"
+                        : "bg-muted/95 text-foreground rounded-bl-none border border-white/10"
                     )}
                   >
                     {msg.content}
@@ -154,14 +154,14 @@ function ChatWidgetContent() {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="Ask about Amit..."
-                  className="w-full bg-muted/50 border-white/20 border rounded-full py-6 pl-8 pr-20 text-xl focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all placeholder:text-muted-foreground"
+                  className="w-full bg-muted/50 border-white/20 border rounded-full py-4 pl-6 pr-14 text-base focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all placeholder:text-muted-foreground"
                 />
                 <button
                   type="submit"
                   disabled={!input.trim() || isLoading}
-                  className="absolute right-2 top-2 p-3.5 bg-indigo-600 text-white rounded-full disabled:opacity-50 hover:bg-indigo-700 transition-colors shadow-lg"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 p-2.5 bg-indigo-600 text-white rounded-full disabled:opacity-50 hover:bg-indigo-700 transition-colors shadow-lg"
                 >
-                  <Send className="w-3.5 h-3.5" />
+                  <Send className="w-5 h-5" />
                 </button>
               </form>
             </div>
