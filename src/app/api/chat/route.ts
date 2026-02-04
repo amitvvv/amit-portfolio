@@ -59,7 +59,7 @@ export async function POST(req: Request) {
     const ip = req.headers.get('x-forwarded-for') || 'unknown';
     const now = Date.now();
     const windowSize = 60 * 1000; // 1 minute window
-    const limit = 5; // 5 requests per minute
+    const limit = 10; // 10 requests per minute
 
     const userRecord = rateLimit.get(ip) || { count: 0, lastRequest: now };
 
